@@ -23,14 +23,14 @@ def load_data(filename, use_labels=True):
     Load data from CSV files and return them as numpy arrays
     The use_labels parameter indicates whether one should
     read the first column (containing class labels). If false,
-    return all 0s. 
+    return all 0s.
     """
 
     # load column 1 to 8 (ignore last one)
-    data = np.loadtxt(open("data/" + filename), delimiter=',',
+    data = np.loadtxt(open("../data/" + filename), delimiter=',',
                       usecols=range(1, 9), skiprows=1)
     if use_labels:
-        labels = np.loadtxt(open("data/" + filename), delimiter=',',
+        labels = np.loadtxt(open("../data/" + filename), delimiter=',',
                             usecols=[0], skiprows=1)
     else:
         labels = np.zeros(data.shape[0])
@@ -76,13 +76,13 @@ def main():
     for i in range(n):
         # for each iteration, randomly hold out 20% of the data as CV set
         X_train, X_cv, y_train, y_cv = cross_validation.train_test_split(
-            X, y, test_size=.20, random_state=i*SEED)
+            X, y, test_size=.20, random_state=i * SEED)
 
         # if you want to perform feature selection / hyperparameter
         # optimization, this is where you want to do it
 
         # train model and make predictions
-        model.fit(X_train, y_train) 
+        model.fit(X_train, y_train)
         preds = model.predict_proba(X_cv)[:, 1]
 
         # compute AUC metric for this CV fold
@@ -91,7 +91,7 @@ def main():
         print "AUC (fold %d/%d): %f" % (i + 1, n, roc_auc)
         mean_auc += roc_auc
 
-    print "Mean AUC: %f" % (mean_auc/n)
+    print "Mean AUC: %f" % (mean_auc / n)
 
     # === Predictions === #
     # When making predictions, retrain the model on the whole training set
