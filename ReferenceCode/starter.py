@@ -10,8 +10,6 @@ pointers on where to go next.
 Paul Duan <email@paulduan.com>
 """
 
-from __future__ import division
-
 import numpy as np
 from sklearn import (metrics, cross_validation, linear_model, preprocessing)
 
@@ -55,7 +53,7 @@ def main():
     model = linear_model.LogisticRegression(C=3)  # the classifier we'll use
 
     # === load data in memory === #
-    print "loading data"
+    print("loading data")
     y, X = load_data('train.csv')
     y_test, X_test = load_data('test.csv', use_labels=False)
 
@@ -88,16 +86,16 @@ def main():
         # compute AUC metric for this CV fold
         fpr, tpr, thresholds = metrics.roc_curve(y_cv, preds)
         roc_auc = metrics.auc(fpr, tpr)
-        print "AUC (fold %d/%d): %f" % (i + 1, n, roc_auc)
+        print("AUC (fold %d/%d): %f" % (i + 1, n, roc_auc))
         mean_auc += roc_auc
 
-    print "Mean AUC: %f" % (mean_auc / n)
+    print("Mean AUC: %f" % (mean_auc / n))
 
     # === Predictions === #
     # When making predictions, retrain the model on the whole training set
     model.fit(X, y)
     preds = model.predict_proba(X_test)[:, 1]
-    filename = raw_input("Enter name for submission file: ")
+    filename = input("Enter name for submission file: ")
     save_results(preds, filename + ".csv")
 
 if __name__ == '__main__':
