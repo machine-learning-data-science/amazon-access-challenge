@@ -39,7 +39,8 @@ def main():
     files = [
         'reference-code/starter_submission.csv', # Logistic Regression
         'output/xgb_155trees_minchildweight.6_colsampletree.45_learningrate0.3_maxdepth8_.86815.csv', # XGBoost
-        'output/rf_2ktrees_entropy_auto_bootstrapped_.863.csv' # Random Forest
+        'output/rf_2ktrees_entropy_auto_bootstrapped_.863.csv', # Random Forest
+        'reference-code/logistic_regression_pred.csv' # Miroslav's Logistic Regression
     ]
     
     outfile = 'output/{}.csv'.format(sys.argv[1])
