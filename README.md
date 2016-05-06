@@ -16,7 +16,7 @@ The `submission` command line argument is the name of the file. The result will 
 
 If you wish to re-train the models, use the following steps:
 
-**1. Run the starter code logistic regression**
+**1. Run the starter code logistic regressions**
 
 First move into the `reference-code` directory.
 
@@ -24,13 +24,19 @@ First move into the `reference-code` directory.
 $ cd reference-code/
 ```
 
-Then, run the file.
+Then, run the first file.
 
 ```bash
 $ python starter.py
 ```
 
 When you are prompted to enter a name for the submission file, enter: `starter_submission`
+
+Next, run Miroslaw's code. Note that this takes quite a while to run.
+
+```bash
+$ python logistic_regression_updated.py
+```
 
 **2. Run our models**
 
