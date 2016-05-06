@@ -18,13 +18,23 @@ If you wish to re-train the models, use the following steps:
 
 **1. Run the starter code logistic regression**
 
+First move into the `reference-code` directory.
+
 ```bash
-$ python reference-code/starter.py
+$ cd reference-code/
+```
+
+Then, run the file.
+
+```bash
+$ python starter.py
 ```
 
 When you are prompted to enter a name for the submission file, enter: `starter_submission`
 
 **2. Run our models**
+
+Go back to the top level directory.
 
 ```bash
 $ python models.py
