@@ -36,7 +36,7 @@ def main():
         exit(1)
 
     # These files are the submissions that we are throwing together in the ensemble.
-    files = ['ReferenceCode/starter_submission.csv', 'output/xgboost_best_model.csv', 'output/rf_2ktrees_entropy_auto_boostrapped.csv']
+    files = ['ReferenceCode/starter_submission.csv', 'output/xgboost_best_model.csv', 'output/rf_submission1.csv']
     
     outfile = 'output/{}.csv'.format(sys.argv[1])
     rank_avg(files, outfile)
