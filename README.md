@@ -1,2 +1,5 @@
 # amazon-access-challenge
-Kaggle's Amazon Access Challenge.
+Our solution to Kaggle's Amazon Access Challenge.
+
+## How to Run
+
