@@ -1,3 +1,8 @@
+# This file trains our final models.
+# No cross validation or parameter tuning is done in this file, since we
+# did all of that in our Juypter notebooks. Look at our notebooks
+# to see the parameter tuning and CV.
+
 import numpy as np
 import pandas as pd
 import xgboost as xgb
