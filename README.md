@@ -19,7 +19,7 @@ Since we have saved the output of all of our individual models, it is easy to ru
 $ python rankedavg.py submission
 ```
 
-The `submission` command line argument is the name of the file. The result will be saved to `output/submission.csv`
+The `submission` command line argument is the name of the file. The result will be saved to `output/submission.csv`.
 
 ---
 

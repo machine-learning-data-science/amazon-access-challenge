@@ -39,7 +39,7 @@ xg.fit(X_train, y_train)
 preds = xg.predict_proba(test)[:, 1]
 
 print('Saving the XGBoost model...')
-#write_to_file('output/xgb_155trees_minchildweight.6_colsampletree.45_learningrate0.3_maxdepth8_.86815.csv', preds)
+write_to_file('output/xgb_155trees_minchildweight.6_colsampletree.45_learningrate0.3_maxdepth8_.86815.csv', preds)
 
 # Train RF
 print('Training the Random Forest model...')
@@ -48,5 +48,5 @@ rf.fit(X_train, y_train)
 preds = rf.predict_proba(test)[:, 1]
 
 print('Saving the Random Forest model...')
-#write_to_file('output/rf_2ktrees_entropy_auto_bootstrapped_.863.csv', preds)
+write_to_file('output/rf_2ktrees_entropy_auto_bootstrapped_.863.csv', preds)
 
