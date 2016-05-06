@@ -28,6 +28,10 @@ test = pd.read_csv('data/test.csv', index_col='id')
 y_train = train.ACTION
 X_train = train.drop(["ACTION"], axis=1)
 
+# Drop unnecessary features
+X_train = X_train.drop(["ROLE_CODE"], axis=1)
+test = test.drop(["ROLE_CODE"], axis=1)
+
 # Train XGB
 print('Training the XGBoost model...')
 xg = xgb.XGBClassifier(max_depth=8, learning_rate=0.3, n_estimators=155, min_child_weight=0.6, subsample=1.0, colsample_bytree=0.45)
