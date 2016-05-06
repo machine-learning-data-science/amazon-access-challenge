@@ -1,7 +1,11 @@
 # amazon-access-challenge
 Our solution to Kaggle's Amazon Access Challenge.
 
+- [Running the Code](#how-to-run)
+
 ## How to Run
+> Note: You must have [XGBoost](https://xgboost.readthedocs.io/en/latest/) installed in order to re-run the models. If you just wish to run the final ensemble, you do not need the library installed.
+
 Since we have saved the output of all of our individual models, it is easy to run the ensemble by itself. From the top level directory, simply run:
 
 ```bash
@@ -12,7 +16,7 @@ The `submission` command line argument is the name of the file. The result will 
 
 If you wish to re-train the models, use the following steps:
 
-- Run the starter code logistic regression
+**1. Run the starter code logistic regression**
 
 ```bash
 $ python reference-code/starter.py
@@ -20,10 +24,10 @@ $ python reference-code/starter.py
 
 When you are prompted to enter a name for the submission file, enter: `starter_submission`
 
-- Run our models
+**2. Run our models**
 
 ```bash
 $ python models.py
 ```
 
-Then you can run `rankedavg.py` again to get the final ensembled submission.
+**3. Now you can run `rankedavg.py` again to get the final ensembled submission**
