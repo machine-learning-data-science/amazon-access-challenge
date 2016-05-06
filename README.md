@@ -9,3 +9,21 @@ $ python rankedavg.py submission
 ```
 
 The `submission` command line argument is the name of the file. The result will be saved to `output/submission.csv`
+
+If you wish to re-train the models, use the following steps:
+
+- Run the starter code logistic regression
+
+```bash
+$ python reference-code/starter.py
+```
+
+When you are prompted to enter a name for the submission file, enter: `starter_submission`
+
+- Run our models
+
+```bash
+$ python models.py
+```
+
+Then you can run `rankedavg.py` again to get the final ensembled submission.
