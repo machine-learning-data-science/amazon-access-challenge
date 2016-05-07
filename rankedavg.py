@@ -37,10 +37,9 @@ def main():
 
     # These files are the submissions that we are throwing together in the ensemble.
     files = [
-        'reference-code/starter_submission.csv', # Logistic Regression
-        'output/xgb_155trees_minchildweight.6_colsampletree.45_learningrate0.3_maxdepth8_.86815.csv', # XGBoost
-        'output/rf_2ktrees_entropy_auto_bootstrapped_.863.csv', # Random Forest
-        'reference-code/logistic_regression_pred.csv' # Miroslav's Logistic Regression
+        'reference-code/starter_submission.csv', # Logistic Regression from Paul Duan.
+        'output/xgb_155trees_colsampletree.5_learningrate0.3_maxdepth8_.86928.csv', # XGBoost
+        'output/rf_1ktrees_entropy_auto_bootstrapped_.86757.csv', # Random Forest
     ]
     
     outfile = 'output/{}.csv'.format(sys.argv[1])
