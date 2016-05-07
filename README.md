@@ -7,7 +7,7 @@ Our solution to Kaggle's Amazon Access Challenge.
 ## Deliverable Locations
 1. The screenshot of our highest score is under `report/submission_screnshot.png`
 2. Our code is in the `.ipynb` and `.py` files in the top level directory. Instructions on how to run are [below](#how-to-run).
-3. Our submission CSV is under `output/ensemble_lr2_xg_rf.csv`
+3. Our submission CSV is under `output/xgb_logreg_rf.csv`
 4. Our report is under `report/report.pdf`
 
 ## How to Run
@@ -24,7 +24,6 @@ The `submission` command line argument is the name of the file. The result will 
 ---
 
 If you wish to re-train the models, use the following steps:
-> Note: We ensembled in Miroslaw's logistic regression code. This takes quite a while to run, so be prepared.
 
 **1. Run the starter code logistic regressions**
 
@@ -34,19 +33,13 @@ First move into the `reference-code` directory.
 $ cd reference-code/
 ```
 
-Then, run the first file.
+Then, run the starter code.
 
 ```bash
 $ python starter.py
 ```
 
 When you are prompted to enter a name for the submission file, enter: `starter_submission`
-
-Next, run Miroslaw's code. Note that this takes quite a while to run.
-
-```bash
-$ python logistic_regression_updated.py
-```
 
 **2. Run our models**
 
