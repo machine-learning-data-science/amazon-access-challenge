@@ -11,6 +11,7 @@ Our solution to Kaggle's Amazon Access Challenge.
 4. Our report is under `report/report.pdf`
 
 ## How to Run
+> You'll need Python 3.5 with the PyData stack installed to run this code. The easiest way to achieve this is to install [Anaconda](https://www.continuum.io/downloads) for Python 3.5.
 > Note: You must have [XGBoost](https://xgboost.readthedocs.io/en/latest/) installed in order to re-run the models. If you just wish to run the final ensemble, you do not need the library installed.
 
 Since we have saved the output of all of our individual models, it is easy to run the ensemble by itself. From the top level directory, simply run:
